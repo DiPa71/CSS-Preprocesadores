@@ -1,0 +1,41 @@
+-var titulo = "Titulo Principal"
+-var titulos = ["Titulo Principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
+-var Datas = ["DATA 0", "DATA 1", "DATA 2", "DATA 3"]
+-var usuario = "Pablo"
+mixin caja(imagen,titulo,contenido)
+	.caja
+			.caja__imagen: img(src="./images/"+imagen)
+			.caja__contenido 
+				h3=titulo
+				p=contenido
+
+
+doctype html
+html
+	head 
+		meta(charser="UTF-8")
+		link(rel="stylesheet", href="./css/ejercicio-pug.css" )
+
+		body
+			header
+				h1 Avocados Game
+				if usuario
+					a Hola #{usuario} 
+				else 
+					a.boton Registro
+			section.intro 
+				.intro__imagen: img(src="./images/imagen.png")
+				.intro__contenido 
+					h2 #{titulos[0]} 
+					//- h2= titulo
+					p
+						|	Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						|	Tempore quo earum, tempora sint cum magni? Voluptates nesciunt enim 
+						|	distinctio consequuntur illum. Eos fugiat dolor atque temporibus labore deserunt consectetur soluta?
+						span Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi praesentium ipsa corporis. Labore voluptatibus placeat, porro saepe impedit neque blanditiis architecto aliquid? Voluptate dolores tempora quia, quos repudiandae saepe quasi?
+					a.boton Leer Mas		
+	main.contenido
+		+caja("imagen.png",titulos[1],'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, architecto sint iste dolores alias accusamus optio ipsam ratione blanditiis. Debitis aliquam quaerat quae error animi exercitationem repellendus voluptas, neque quasi?')
+		+caja("imagen.png",titulos[2],'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, architecto sint iste dolores alias accusamus optio ipsam ratione blanditiis. Debitis aliquam quaerat quae error animi exercitationem repellendus voluptas, neque quasi?')
+		+caja("imagen.png",titulos[3],'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, architecto sint iste dolores alias accusamus optio ipsam ratione blanditiis. Debitis aliquam quaerat quae error animi exercitationem repellendus voluptas, neque quasi?')
+		

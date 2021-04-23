@@ -1,0 +1,22 @@
+foo h3 {
+  font-size: 20px;
+  margin: 0;
+}
+foo h2 {
+  font-size: 25px;
+  margin: 0;
+}
+foo h1 {
+  font-size: 30px;
+  margin: 0;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
